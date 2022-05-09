@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A&S Express</title>
+</head>
+<body style="background: #232526;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+  <center>
+     <h1 style="color:white">A&S Express<br></h1>
+  </center>   
+  <center>
+    <table border="100">
+      <tr>
+        <td>
+          <fieldset>
+           <legend><h2 style="color:white">You Choose According To your Convenience</h2></legend>
+            <form method="post">
+            <center>
+			<table border="1" width="700px" height="280px">
+			<tr>
+
+				<th style="color:red">BusName</th>
+				<th style="color:red">Time</th>
+				<th style="color:red">Price</th>
+				<th style="color:red">Starting point</th>
+				<th style="color:red">Ending Point</th>
+				<th style="color:red">Choose Your Bus</th>
+			</tr>
+
+			<% for(var i=0; i < uList.length; i++){ %>
+			<tr>
+			
+				<td align="middle" style="color: white;"><%= uList[i].busname %></td>
+				<td align="middle" style="color: white;"><%= uList[i].time %></td>
+				<td align="middle" style="color: white;"><%= uList[i].price %></td>
+				<td align="middle" style="color: white;"><%= uList[i].start %></td>
+				<td align="middle" style="color: white;"><%= uList[i].end %></td>
+				<td>
+				<a style="color:rgb(44, 229, 16);" href="/userhome/sit/<%= uList[i].busid %>"><center>Choose Sit</center></a> 
+				</td>
+			</tr>
+			<% } %>
+		</table>
+		</center>
+		</form>
+    	</fieldset>
+        </td>
+      </tr>
+    </body>
+</html>
